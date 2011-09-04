@@ -1,0 +1,141 @@
+--- modules/ejb/src/xdoclet/modules/ejb/XDocletModulesEjbMessages.java.sav	2004-08-21 12:42:54.000000000 +0200
++++ modules/ejb/src/xdoclet/modules/ejb/XDocletModulesEjbMessages.java	2005-02-15 11:34:41.950971072 +0100
+@@ -17,8 +17,7 @@
+     public final static String DO_NOT_EDIT = "DO_NOT_EDIT";
+ 
+     /**
+-     * @msg.bundle   msg="XDoclet can''t guess what CMP version to use for {0} because the <entitycmp> task isn't used,
+-     *      and there is no ejb:bean cmp-version tag. Please use one of them."
++     * @msg.bundle   msg="XDoclet can''t guess what CMP version to use for {0} because the <entitycmp> task isn't used, and there is no ejb:bean cmp-version tag. Please use one of them."
+      */
+     public final static String CANT_GUESS_CMP_VERSION = "CANT_GUESS_CMP_VERSION";
+ 
+@@ -127,8 +126,7 @@
+     public final static String VALUE_OBJECT_FOR = "VALUE_OBJECT_FOR";
+ 
+     /**
+-     * @msg.bundle   msg="A Value Object has an identity if the attributes making its Primary Key have all been set. An
+-     *      object without identity is never equal to any other object."
++     * @msg.bundle   msg="A Value Object has an identity if the attributes making its Primary Key have all been set. An object without identity is never equal to any other object."
+      */
+     public final static String VALUE_OBJECT_IDENTITY_COMMENT = "VALUE_OBJECT_IDENTITY_COMMENT";
+ 
+@@ -247,14 +245,12 @@
+     public final static String RELATION_TOO_MANY_NAMES = "RELATION_TOO_MANY_NAMES";
+ 
+     /**
+-     * @msg.bundle   msg="The relation with the name \"{0}\" declared in {1} seems to be unidirectional since it does
+-     *      not occur anywhere else. The target-ejb parameter must therefore be specified."
++     * @msg.bundle   msg="The relation with the name \"{0}\" declared in {1} seems to be unidirectional since it does not occur anywhere else. The target-ejb parameter must therefore be specified."
+      */
+     public final static String RELATION_NEEDS_TARGET = "RELATION_NEEDS_TARGET";
+ 
+     /**
+-     * @msg.bundle   msg="The relation with the name \"{0}\" declared in {1} seems to be bidirectional since it is
+-     *      declared in two places. The target-ejb parameter must not be specified for bidirectional relationships."
++     * @msg.bundle   msg="The relation with the name \"{0}\" declared in {1} seems to be bidirectional since it is declared in two places. The target-ejb parameter must not be specified for bidirectional relationships."
+      */
+     public final static String RELATION_NEEDS_NO_TARGET = "RELATION_NEEDS_NO_TARGET";
+ 
+@@ -275,6 +271,7 @@
+ 
+     /**
+      * @msg.bundle   msg="\"Wrong version. Had \" + getVersion() + \", got \" + dataHolder.getVersion()"
++     *
+      */
+     public final static String ENTITY_DATAHOLDER_VERSION = "ENTITY_DATAHOLDER_VERSION";
+ 
+@@ -284,20 +281,17 @@
+     public final static String SOFT_LOCK_VERSION = "SOFT_LOCK_VERSION";
+ 
+     /**
+-     * @msg.bundle   msg="Cached remote home (EJBHome). Uses lazy loading to obtain its value (loaded by getHome()
+-     *      methods)."
++     * @msg.bundle   msg="Cached remote home (EJBHome). Uses lazy loading to obtain its value (loaded by getHome() methods)."
+      */
+     public final static String UTIL_CACHED_REMOTE = "UTIL_CACHED_REMOTE";
+ 
+     /**
+-     * @msg.bundle   msg="Cached queue (javax.jms.Queue). Uses lazy loading to obtain its value (loaded by getQueue()
+-     *      methods)."
++     * @msg.bundle   msg="Cached queue (javax.jms.Queue). Uses lazy loading to obtain its value (loaded by getQueue() methods)."
+      */
+     public final static String UTIL_CACHED_QUEUE = "UTIL_CACHED_QUEUE";
+ 
+     /**
+-     * @msg.bundle   msg="Cached topic (javax.jms.Topic). Uses lazy loading to obtain its value (loaded by getTopic()
+-     *      methods)."
++     * @msg.bundle   msg="Cached topic (javax.jms.Topic). Uses lazy loading to obtain its value (loaded by getTopic() methods)."
+      */
+     public final static String UTIL_CACHED_TOPIC = "UTIL_CACHED_TOPIC";
+ 
+@@ -307,8 +301,7 @@
+     public final static String UTIL_CACHED_CONNECTION_FACTORY = "UTIL_CACHED_CONNECTION_FACTORY";
+ 
+     /**
+-     * @msg.bundle   msg="Cached local home (EJBLocalHome). Uses lazy loading to obtain its value (loaded by
+-     *      getLocalHome() methods)."
++     * @msg.bundle   msg="Cached local home (EJBLocalHome). Uses lazy loading to obtain its value (loaded by getLocalHome() methods)."
+      */
+     public final static String UTIL_CACHED_LOCAL = "UTIL_CACHED_LOCAL";
+ 
+@@ -338,7 +331,7 @@
+     public final static String UTIL_OBTAIN_QUEUE_DEF_IC = "UTIL_OBTAIN_QUEUE_DEF_IC";
+ 
+     /**
+-     * @msg.bundle   msg="Obtain destination topic from parameterised initial co ntext"
++     * @msg.bundle   msg="Obtain destination topic from parameterised initial context"
+      */
+     public final static String UTIL_OBTAIN_TOPIC_PARAM_IC = "UTIL_OBTAIN_TOPIC_PARAM_IC";
+ 
+@@ -378,20 +371,17 @@
+     public final static String UTIL_OBTAIN_IC = "UTIL_OBTAIN_IC";
+ 
+     /**
+-     * @msg.bundle   msg="A 32 byte GUID generator (Globally Unique ID). These artificial keys SHOULD <strong>NOT
+-     *      </strong> be seen by the user,"
++     * @msg.bundle   msg="A 32 byte GUID generator (Globally Unique ID). These artificial keys SHOULD <strong>NOT</strong> be seen by the user,"
+      */
+     public final static String UTIL_GUID_1 = "UTIL_GUID_1";
+ 
+     /**
+-     * @msg.bundle   msg="not even touched by the DBA but with very rare exceptions, just manipulated by the database
+-     *      and the programs."
++     * @msg.bundle   msg="not even touched by the DBA but with very rare exceptions, just manipulated by the database and the programs."
+      */
+     public final static String UTIL_GUID_2 = "UTIL_GUID_2";
+ 
+     /**
+-     * @msg.bundle   msg="Usage: Add an id field (type java.lang.String) to your EJB, and add
+-     *      setId(XXXUtil.generateGUID(this)); to the ejbCreate method."
++     * @msg.bundle   msg="Usage: Add an id field (type java.lang.String) to your EJB, and add setId(XXXUtil.generateGUID(this)); to the ejbCreate method."
+      */
+     public final static String UTIL_GUID_USAGE = "UTIL_GUID_USAGE";
+ 
+@@ -437,14 +427,12 @@
+     public final static String INTERFACE_IMPL_NOT_FOUND = "INTERFACE_IMPL_NOT_FOUND";
+ 
+     /**
+-     * @msg.bundle   msg="''pattern'' parameter does not have a '''{0'}'' in it. '''{0'}'' is replaced by EJB name of
+-     *      the class under processing."
++     * @msg.bundle   msg="''pattern'' parameter does not have a '''{0'}'' in it. '''{0'}'' is replaced by EJB name of the class under processing."
+      */
+     public final static String PATTERN_HAS_NO_PLACEHOLDER = "PATTERN_HAS_NO_PLACEHOLDER";
+ 
+     /**
+-     * @msg.bundle   msg="Could not load the bean implementation class for interface ''{0}''! Make sure it's available
+-     *      for ejbdoclet."
++     * @msg.bundle   msg="Could not load the bean implementation class for interface ''{0}''! Make sure it's available for ejbdoclet."
+      */
+     public final static String INTERFACE_IMPL_COULDNT_LOAD = "INTERFACE_IMPL_COULDNT_LOAD";
+ 
+@@ -459,8 +447,7 @@
+     public final static String NOT_DEFINED = "NOT_DEFINED";
+ 
+     /**
+-     * @msg.bundle   msg="Class ''{0}'' should be defined abstract if you want the ''{1}'' sub-task to generate the
+-     *      subclass properly."
++     * @msg.bundle   msg="Class ''{0}'' should be defined abstract if you want the ''{1}'' sub-task to generate the subclass properly."
+      */
+     public final static String CLASS_NOT_ABSTRACT = "CLASS_NOT_ABSTRACT";
+ 

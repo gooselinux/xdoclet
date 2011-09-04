@@ -1,0 +1,68 @@
+--- core/build.xml.orig	2004-06-29 16:56:35.151350000 +0200
++++ core/build.xml	2004-06-29 16:56:52.281395000 +0200
+@@ -94,7 +94,7 @@
+     <!-- =================================================================== -->
+     <target name="beautify" depends="prepare">
+         <taskdef name="pretty" classname="org.acm.seguin.ant.Pretty"
+-                 classpath="${lib.dir}/prettyprinter.jar"/>
++                 classpath="${lib.dir}/jrefactory.jar"/>
+ 
+         <pretty settingsDir="${config.dir}" cvs="true" compileDir="${core.classes.dir}">
+             <fileset dir="${core.src.dir}">
+--- modules/modules-common.ent.orig	2004-06-29 17:19:10.494768000 +0200
++++ modules/modules-common.ent	2004-06-29 17:19:33.364834000 +0200
+@@ -225,7 +225,7 @@
+     <target name="beautify" depends="init" unless="module.jar.uptodate">
+ 
+         <taskdef name="pretty2" classname="org.acm.seguin.ant.Pretty"
+-                 classpath="${lib.dir}/prettyprinter.jar"/>
++                 classpath="${lib.dir}/jrefactory.jar"/>
+ 
+         <pretty2 settingsDir="${config.dir}" cvs="true" compileDir="${module.classes.dir}">
+             <fileset dir="${module.src.dir}">
+--- build.xml.orig	2004-06-21 15:14:10.000000000 -0400
++++ build.xml	2005-03-07 12:34:42.000000000 -0500
+@@ -6,6 +6,7 @@
+     <property file="${user.home}/build.properties"/>
+     <property name="xjavadoc.jar" location="${lib.dir}/xjavadoc-${xjavadoc.version}.jar"/>
+     <property environment="env"/>
++    <property name="xjavadoc.uptodate" value="true"/>
+ 
+     <target name="xjavadoc-determine-presence">
+         <available property="xjavadoc.sources.present"
+@@ -13,7 +14,7 @@
+                    type="dir"/>
+     </target>
+ 
+-    <target name="xjavadoc-determine-uptodate" depends="xjavadoc-determine-presence" if="xjavadoc.sources.present">
++    <target name="xjavadoc-determine-uptodate" depends="xjavadoc-determine-presence,download-xjavadoc" if="xjavadoc.sources.present">
+         <echo>XJavaDoc sources are available. Checking against ${xjavadoc.jar}</echo>
+         <uptodate property="xjavadoc.uptodate"
+                   targetfile="${xjavadoc.jar}">
+@@ -36,7 +37,7 @@
+         <echo>The XJavaDoc binaries are up to date. No need to build.</echo>
+     </target>
+ 
+-    <target name="download-xjavadoc" depends="xjavadoc-determine-presence" unless="xjavadoc.sources.present">
++    <target name="download-xjavadoc" depends="xjavadoc-determine-presence" unless="xjavadoc.uptodate">
+         <echo>
+         XJavaDoc's sources are not available in ${basedir}/../xjavadoc
+         Trying to download xjavadoc via HTTP. If you're behind a proxy, you should uncomment
+@@ -49,7 +50,7 @@
+              dest="${xjavadoc.jar}"/>
+     </target>
+ 
+-    <target name="xjavadoc" depends="build-xjavadoc,dont-build-xjavadoc,download-xjavadoc"/>
++    <target name="xjavadoc" depends="build-xjavadoc,dont-build-xjavadoc"/>
+ 
+     <target name="core">
+         <ant dir="${core.dir}"/>
+@@ -145,7 +146,7 @@
+         <copy file="${lib.dir}/log4j.jar" todir="${dist.lib.dir}"/>
+ 
+         <!-- Copy the Jakarta Commons Collections jar to the dist.lib directory -->
+-        <copy file="${lib.dir}/commons-collections-2.0.jar" todir="${dist.lib.dir}"/>
++        <copy file="${lib.dir}/commons-collections.jar" todir="${dist.lib.dir}"/>
+ 
+         <delete file="${dist.dir}/activity-log.xml"/>
+ 

@@ -1,0 +1,11 @@
+--- core/src/xdoclet/tagshandler/AbstractProgramElementTagsHandler.java.sav	2006-06-08 11:58:43.000000000 +0200
++++ core/src/xdoclet/tagshandler/AbstractProgramElementTagsHandler.java	2006-06-08 12:00:07.000000000 +0200
+@@ -728,7 +728,7 @@
+         if (sort) {
+             // sort fields, but we should make a copy first, because members is not a new copy, it's shared by all
+             List sortedMembers = new ArrayList(members);
+-
++            Collections.sort(sortedMembers);
+             members = sortedMembers;
+         }
+ 

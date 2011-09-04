@@ -1,0 +1,51 @@
+--- project.xml.sav	2005-04-16 02:01:41.000000000 +0200
++++ project.xml	2006-02-21 18:15:29.000000000 +0100
+@@ -276,7 +276,6 @@
+         </contributor>
+         <contributor>
+             <name>Andreas &quot;Mad&quot; Schaefer</name>
+-            <id>schaefera</id>
+             <email>schaefera@users.sourceforge.net</email>
+             <organization>JBossGroup</organization>
+         </contributor>
+@@ -301,7 +300,6 @@
+ 		</contributor>
+         <contributor>
+             <name>Christian Amor Kvalheim</name>
+-            <id>christkv</id>
+             <email>christkv@users.sourceforge.net</email>
+         </contributor>
+         <contributor>
+@@ -381,7 +379,6 @@
+         </contributor>
+         <contributor>
+             <name>Joel Rosi-Schwatz</name>
+-            <id>joelrs</id>
+             <email>joelrs@users.sourceforge.net</email>
+             <roles>
+                 <role>Hibernate Module</role>
+@@ -539,7 +536,6 @@
+         </contributor>
+         <contributor>
+             <name>Vincent Harcq</name>
+-            <id>vharcq</id>
+             <email>vharcq@users.sourceforge.net</email>
+             <roles>
+                 <role>EJB Module - Value Objects</role>
+@@ -591,12 +587,12 @@
+     </build>
+     
+     <reports>
+-        <report>maven-changelog-plugin</report>
+-        <report>maven-changes-plugin</report>
+-        <report>maven-developer-activity-plugin</report>
++        <!--<report>maven-changelog-plugin</report>-->
++        <!--<report>maven-changes-plugin</report>-->
++        <!--<report>maven-developer-activity-plugin</report>-->
+         <!-- Enable to see the elaborate CVS statistics. -->
+         <!--<report>maven-statcvs-plugin</report>-->
+-        <report>maven-file-activity-plugin</report>
++        <!--<report>maven-file-activity-plugin</report>-->
+         <report>maven-linkcheck-plugin</report>
+     </reports>
+ </project>

@@ -1,0 +1,22 @@
+--- modules/bea/src/xdoclet/modules/bea/wls/ejb/WebLogicSubTask.java.sav	2004-09-16 17:33:15.000000000 +0200
++++ modules/bea/src/xdoclet/modules/bea/wls/ejb/WebLogicSubTask.java	2005-02-15 10:29:58.397360960 +0100
+@@ -304,7 +304,7 @@
+      * Sets the persistence type to use. Useful if you're using a different persistence manager like MVCSoft
+      *
+      * @param persistence
+-     * @ant.not-required   No, default is "weblogic"
++     * @ant.not-required   "No, default is 'weblogic'"
+      */
+     public void setPersistence(String persistence)
+     {
+@@ -318,8 +318,8 @@
+      * "DropAndCreateAlways", "AlterOrCreate" and "Disabled" for WLS Servers &gt;= 8.1.
+      *
+      * @param flag         The new Createtables value
+-     * @ant.not-required   No, default is "False" for WLS Servers &lt; Version 8.1 and "Disabled" for WLS Servers &gt;=
+-     *      8.1
++     * @ant.not-required   "No, default is 'False' for WLS Servers &lt; Version 8.1 and 'Disabled' for WLS Servers &gt;=
++     *      8.1"
+      */
+     public void setCreatetables(CreateTablesType flag)
+     {

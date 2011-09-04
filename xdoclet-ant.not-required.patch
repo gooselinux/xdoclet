@@ -1,0 +1,257 @@
+diff -ru core/src/xdoclet/TemplateSubTask.java.orig core/src/xdoclet/TemplateSubTask.java
+--- core/src/xdoclet/TemplateSubTask.java.orig	2005-04-15 20:01:51.000000000 -0400
++++ core/src/xdoclet/TemplateSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -245,7 +245,7 @@
+      * Indicates whether or not to generate for interfaces.
+      *
+      * @param acceptInterfaces
+-     * @ant.not-required        No, default is "true"
++     * @ant.not-required        "No, default is 'true'"
+      */
+     public void setAcceptInterfaces(boolean acceptInterfaces)
+     {
+@@ -256,7 +256,7 @@
+      * Indicates whether or not to generate for abstract classes.
+      *
+      * @param acceptAbstractClasses
+-     * @ant.not-required             No, default is "true"
++     * @ant.not-required             "No, default is 'true'"
+      */
+     public void setAcceptAbstractClasses(boolean acceptAbstractClasses)
+     {
+@@ -277,7 +277,7 @@
+      * Indicates whether or not package substitution should be inherited
+      *
+      * @param packageSubstitutionInheritanceSupported  The new PackageSubstitutionInheritanceSupported value
+-     * @ant.not-required                               No, default is "true"
++     * @ant.not-required                               "No, default is 'true'"
+      */
+     public void setPackageSubstitutionInheritanceSupported(boolean packageSubstitutionInheritanceSupported)
+     {
+@@ -299,7 +299,7 @@
+      * Indicates whether or not to prefix with package structure.
+      *
+      * @param prefixWithPackageStructure  The new PrefixWithPackageStructure value
+-     * @ant.not-required                  No, default is "true"
++     * @ant.not-required                  "No, default is 'true'"
+      */
+     public void setPrefixWithPackageStructure(boolean prefixWithPackageStructure)
+     {
+diff -ru core/src/xdoclet/XmlSubTask.java.orig core/src/xdoclet/XmlSubTask.java
+--- core/src/xdoclet/XmlSubTask.java.orig	2005-04-15 20:01:51.000000000 -0400
++++ core/src/xdoclet/XmlSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -129,7 +129,7 @@
+      * available in some subtasks.
+      *
+      * @param useIds       The new UseIds value
+-     * @ant.not-required   No. Default is "false"
++     * @ant.not-required   "No. Default is 'false'"
+      */
+     public void setUseIds(boolean useIds)
+     {
+@@ -141,7 +141,7 @@
+      * to "ISO-8859-1".
+      *
+      * @param xmlEncoding  The new Xmlencoding value
+-     * @ant.not-required   No, default is "UTF-8"
++     * @ant.not-required   "No, default is 'UTF-8'"
+      */
+     public void setXmlencoding(String xmlEncoding)
+     {
+diff -ru modules/apache/src/xdoclet/modules/apache/struts/StrutsConfigXmlSubTask.java.orig modules/apache/src/xdoclet/modules/apache/struts/StrutsConfigXmlSubTask.java
+--- modules/apache/src/xdoclet/modules/apache/struts/StrutsConfigXmlSubTask.java.orig	2004-08-30 17:17:48.000000000 -0400
++++ modules/apache/src/xdoclet/modules/apache/struts/StrutsConfigXmlSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -101,7 +101,7 @@
+      * Sets the struts version to use. Legal values are "1.0", "1.1" and "1.2".
+      *
+      * @param version
+-     * @ant.not-required   No. Default is "1.0".
++     * @ant.not-required   "No. Default is '1.0'".
+      */
+     public void setVersion(StrutsVersion version)
+     {
+diff -ru modules/ejb/src/xdoclet/modules/ejb/EjbDocletTask.java.orig modules/ejb/src/xdoclet/modules/ejb/EjbDocletTask.java
+--- modules/ejb/src/xdoclet/modules/ejb/EjbDocletTask.java.orig	2004-09-03 15:30:12.000000000 -0400
++++ modules/ejb/src/xdoclet/modules/ejb/EjbDocletTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -56,7 +56,7 @@
+      * specified, then ejbdoclet will generate EJB 2.0-compatible ejb-jar.xml file.
+      *
+      * @param ejbspec
+-     * @ant.not-required   No. Default is "2.0"
++     * @ant.not-required   "No. Default is '2.0'"
+      */
+     public void setEjbSpec(EjbSpecVersion ejbspec)
+     {
+@@ -68,7 +68,7 @@
+      * no name parameter is specified in the <a href="../../../../tags/ejb-tags.html#@ejb.bean">ejb.bean</a> tag.
+      *
+      * @param ejbClassNameSuffix
+-     * @ant.not-required          No, Default is "Bean,EJB,Ejb"
++     * @ant.not-required          "No, Default is 'Bean,EJB,Ejb'"
+      */
+     public void setEjbClassNameSuffix(String ejbClassNameSuffix)
+     {
+diff -ru modules/ejb/src/xdoclet/modules/ejb/entity/DataObjectSubTask.java.orig modules/ejb/src/xdoclet/modules/ejb/entity/DataObjectSubTask.java
+--- modules/ejb/src/xdoclet/modules/ejb/entity/DataObjectSubTask.java.orig	2005-04-15 20:02:25.000000000 -0400
++++ modules/ejb/src/xdoclet/modules/ejb/entity/DataObjectSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -77,7 +77,7 @@
+      * The pattern by which the data object classes are named. The placeholder "{0}" designates the EJB name.
+      *
+      * @param new_pattern  The new Pattern value
+-     * @ant.not-required   No, default is "{0}Data"
++     * @ant.not-required   "No, default is '{0}Data'"
+      */
+     public void setPattern(String new_pattern)
+     {
+diff -ru modules/ejb/src/xdoclet/modules/ejb/entity/ValueObjectSubTask.java modules/ejb/src/xdoclet/modules/ejb/entity/ValueObjectSubTask.java
+--- modules/ejb/src/xdoclet/modules/ejb/entity/ValueObjectSubTask.java.orig	2005-04-15 20:02:25.000000000 -0400
++++ modules/ejb/src/xdoclet/modules/ejb/entity/ValueObjectSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -137,7 +137,7 @@
+      * The pattern by which the value object classes are named. The placeholder "{0}" designates the EJB name.
+      *
+      * @param new_pattern  The new Pattern value
+-     * @ant.not-required   No, default is "{0}Value"
++     * @ant.not-required   "No, default is '{0}Value'"
+      */
+     public void setPattern(String new_pattern)
+     {
+diff -ru modules/hibernate/src/xdoclet/modules/hibernate/HibernateSubTask.java.orig modules/hibernate/src/xdoclet/modules/hibernate/HibernateSubTask.java
+--- modules/hibernate/src/xdoclet/modules/hibernate/HibernateSubTask.java.orig	2005-04-15 20:02:44.000000000 -0400
++++ modules/hibernate/src/xdoclet/modules/hibernate/HibernateSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -102,7 +102,7 @@
+      * Sets the hibernate version to use. Legal values are "1.1", "2.0", "2.1" and "3.0".
+      *
+      * @param version
+-     * @ant.not-required   No. Default is "1.1".
++     * @ant.not-required   "No. Default is '1.1'".
+      */
+     public void setVersion(HibernateVersion version)
+     {
+diff -ru modules/hp/src/xdoclet/modules/hp/hpas/ejb/HPASSubTask.java.orig modules/hp/src/xdoclet/modules/hp/hpas/ejb/HPASSubTask.java
+--- modules/hp/src/xdoclet/modules/hp/hpas/ejb/HPASSubTask.java.orig	2004-08-16 05:43:41.000000000 -0400
++++ modules/hp/src/xdoclet/modules/hp/hpas/ejb/HPASSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -94,8 +94,8 @@
+      * The path to a local directory indicating where the container should passivate Stateful Session Bean instances.
+      *
+      * @param sfsbPassivationRoot  The new SfsbPassivationRoot value
+-     * @ant.not-required           No, only if <code>hpas.bean passivation="true"</code> tag is used on a stateful
+-     *      session bean. Default is "".
++     * @ant.not-required           "No, only if <code>hpas.bean passivation='true'</code> tag is used on a stateful
++     *      session bean. Default is ''."
+      */
+     public void setSfsbPassivationRoot(String sfsbPassivationRoot)
+     {
+@@ -106,7 +106,7 @@
+      * Only applies when using CMP. Specifies the name of a third party persistence manager product.
+      *
+      * @param persistenceProduct  The new PersistenceProduct value
+-     * @ant.not-required          No, default is "VXML".
++     * @ant.not-required          "No, default is 'VXML'."
+      */
+     public void setPersistenceProduct(String persistenceProduct)
+     {
+@@ -117,7 +117,7 @@
+      * Only applies when using CMP. Specifies the version of the third party product.
+      *
+      * @param persistenceVersion  The new PersistenceVersion value
+-     * @ant.not-required          No, default is "".
++     * @ant.not-required          "No, default is ''."
+      */
+     public void setPersistenceVersion(String persistenceVersion)
+     {
+@@ -141,7 +141,7 @@
+      * generated bean class name.
+      *
+      * @param persistenceSuffix  The new PersistenceSuffix value
+-     * @ant.not-required         No, default is "".
++     * @ant.not-required         "No, default is ''."
+      */
+     public void setPersistenceSuffix(String persistenceSuffix)
+     {
+diff -ru modules/libelis/src/xdoclet/modules/libelis/jdo/LidoSubTask.java.orig modules/libelis/src/xdoclet/modules/libelis/jdo/LidoSubTask.java
+--- modules/libelis/src/xdoclet/modules/libelis/jdo/LidoSubTask.java.orig	2004-08-16 05:46:28.000000000 -0400
++++ modules/libelis/src/xdoclet/modules/libelis/jdo/LidoSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -61,7 +61,7 @@
+      * The version of Lido. Supported versions are 1.3.
+      *
+      * @param version      The new Version value
+-     * @ant.not-required   No, default is "1.3".
++     * @ant.not-required   "No, default is '1.3'."
+      */
+     public void setVersion(LidoVersionTypes version)
+     {
+diff -ru modules/mvcsoft/src/xdoclet/modules/mvcsoft/ejb/MVCSoftSubTask.java.orig modules/mvcsoft/src/xdoclet/modules/mvcsoft/ejb/MVCSoftSubTask.java
+--- modules/mvcsoft/src/xdoclet/modules/mvcsoft/ejb/MVCSoftSubTask.java.orig	2002-10-03 16:47:38.000000000 -0400
++++ modules/mvcsoft/src/xdoclet/modules/mvcsoft/ejb/MVCSoftSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -91,7 +91,7 @@
+      * Sets the Connectionjndiname attribute of the MVCSoftSubTask object
+      *
+      * @param jndiName     The new Connectionjndiname value
+-     * @ant.not-required   No, default is "java:DefaultDS"
++     * @ant.not-required   "No, default is 'java:DefaultDS'"
+      */
+     public void setConnectionjndiname(String jndiName)
+     {
+@@ -102,7 +102,7 @@
+      * Sets the Loggingtype attribute of the MVCSoftSubTask object
+      *
+      * @param loggingType  The new Loggingtype value
+-     * @ant.not-required   No, default is "None"
++     * @ant.not-required   "No, default is 'None'"
+      */
+     public void setLoggingtype(String loggingType)
+     {
+diff -ru modules/solarmetric/src/xdoclet/modules/solarmetric/jdo/KodoSubTask.java.orig modules/solarmetric/src/xdoclet/modules/solarmetric/jdo/KodoSubTask.java
+--- modules/solarmetric/src/xdoclet/modules/solarmetric/jdo/KodoSubTask.java.orig	2004-08-16 09:28:44.000000000 -0400
++++ modules/solarmetric/src/xdoclet/modules/solarmetric/jdo/KodoSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -61,7 +61,7 @@
+      * The version of Kodo. Supported versions are 2.3.
+      *
+      * @param version      The new Version value
+-     * @ant.not-required   No, default is "2.3".
++     * @ant.not-required   "No, default is '2.3'."
+      */
+     public void setVersion(KodoVersionTypes version)
+     {
+diff -ru modules/sun/src/xdoclet/modules/sun/sunone/ejb/SunONESubTask.java.orig modules/sun/src/xdoclet/modules/sun/sunone/ejb/SunONESubTask.java
+--- modules/sun/src/xdoclet/modules/sun/sunone/ejb/SunONESubTask.java.orig	2003-03-29 19:28:18.000000000 -0500
++++ modules/sun/src/xdoclet/modules/sun/sunone/ejb/SunONESubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -227,7 +227,7 @@
+      * The SunONE/iPlanet version. Supported versions are 6.0, 6.5 and 7.0.
+      *
+      * @param version      The new Version value
+-     * @ant.not-required   No, default is "7.0".
++     * @ant.not-required   "No, default is '7.0'."
+      */
+     public void setVersion(SunONEVersionTypes version)
+     {
+@@ -238,7 +238,7 @@
+      * Optional default transaction manager type for all components. Allowed values are 'local' and 'global'.
+      *
+      * @param transactionManagerType  "local" or "global"
+-     * @ant.not-required              Only used for version = 6.5, and optional even then.
++     * @ant.not-required              "Only used for version = 6.5, and optional even then."
+      */
+     public void setTransactionManagerType(String transactionManagerType)
+     {
+@@ -249,7 +249,7 @@
+      * Specifies the absolute jndi-name of the database to be used for storing CMP beans in the EJB JAR file.
+      *
+      * @param cmpResourceJndiName  String containing the JNDI name
+-     * @ant.not-required           Only used for version = 7.0, and optional even then.
++     * @ant.not-required           "Only used for version = 7.0, and optional even then."
+      */
+     public void setCmpResourceJndiName(String cmpResourceJndiName)
+     {
+diff -ru modules/tjdo/src/xdoclet/modules/triactive/jdo/TJDOSubTask.java.orig modules/tjdo/src/xdoclet/modules/triactive/jdo/TJDOSubTask.java
+--- modules/tjdo/src/xdoclet/modules/triactive/jdo/TJDOSubTask.java.orig	2004-08-16 09:29:00.000000000 -0400
++++ modules/tjdo/src/xdoclet/modules/triactive/jdo/TJDOSubTask.java	2008-10-05 22:23:51.000000000 -0400
+@@ -57,7 +57,7 @@
+      * The version of TJDO. Supported versions are 2.0.
+      *
+      * @param version      The new Version value
+-     * @ant.not-required   No, default is "2.0".
++     * @ant.not-required   "No, default is '2.0'."
+      */
+     public void setVersion(TJDOVersionTypes version)
+     {
